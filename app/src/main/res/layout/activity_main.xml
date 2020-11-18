@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Activity_main = c'est ici ou on va afficher nos élements -->
+<!-- Un "layout" est un genre de gros container qui permet d'ajouter et de structurer nos élements
+(button, formulaire, texte, img...) C'est un fichier .xml qui est à interpréter comme une sorte de "div"-->
+<!-- linearLayout = permet d'afficher nos éléments soit verticalement/horizontalement,
+ on inclue à l'intérieur notre list view pour la voir. C'est en qlq sorte le container principal-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- ListView = c'est une liste items en list vertical/horizontal. Identique que la gridView sauf
+     que cette dernière est en mode grid, on peut donc choisir le nbx de colonnes/rows -->
+    <!-- "wrap-content" = adapte la largeur/hauteur en fonction de son contenu-->
+    <!-- "match-parent" = prend toute la largeur/hauteur du parent-->
+    <!-- id = identifiant donné a la liste pour pouvoir la récupérer ailleurs -->
+    <ListView
+        android:id="@+id/shop_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+

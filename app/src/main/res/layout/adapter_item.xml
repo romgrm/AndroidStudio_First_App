@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Creation d'un nouveau layout pour gérer les items de notre listView (layout activity_main)
+un par un -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/default_margin"
+    android:id="@+id/parent">
+
+    <!-- J'importe une nouvelle image via mon dossier "drawable" ou j'ai inclue mes png -->
+    <ImageView
+        android:id="@+id/item_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/item_beer_icon" />
+
+    <!-- Je créer un text pour le nom de l'item et un pour son prix. Je met ça dans une "relativeLayout"
+    pour pouvoir les placer correctement les uns a côté des autres -->
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="@dimen/default_margin"
+       android:layout_marginTop="50dp">
+
+       <TextView
+           android:id="@+id/item_name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/item_default_name"
+           android:textColor="@color/black"/>
+
+       <TextView
+           android:id="@+id/item_price"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/item_default_price"
+           android:layout_below="@+id/item_name"/>
+   </RelativeLayout>
+
+
+
+</LinearLayout>
+
